@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilos-xml.css"?>
+<recursos>
+  <recurso>
+    <categoria>Trámites</categoria>
+    <titulo>Cómo solicitar el NIE</titulo>
+    <descripcion>Paso a paso para pedir el NIE en España.</descripcion>
+  </recurso>
+  <recurso>
+    <categoria>Vivienda</categoria>
+    <titulo>Buscar piso en Madrid</titulo>
+    <descripcion>Consejos prácticos y portales recomendados.</descripcion>
+  </recurso>
+  <recurso>
+    <categoria>Empleo</categoria>
+    <titulo>Crear tu CV con inteligencia artificial</titulo>
+    <descripcion>Usa herramientas inteligentes para destacar tu perfil.</descripcion>
+  </recurso>
+  <recurso>
+    <categoria>Educación</categoria>
+    <titulo>Homologación de títulos universitarios</titulo>
+    <descripcion>Guía actualizada para validar tus estudios en España.</descripcion>
+  </recurso>
+</recursos>

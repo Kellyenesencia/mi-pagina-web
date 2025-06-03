@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursos para migrantes</title>
+  <link rel="stylesheet" href="../css/estilos-xml.css">
+  <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <h1 style="text-align:center;">Recursos útiles para migrantes</h1>
+  <div id="contenedor"></div>
+
+  <script>
+    fetch('recursos.xml')
+      .then(response => response.text())
+      .then(data => new window.DOMParser().parseFromString(data, "text/xml"))
+      .then(xml => {
+        const recursos = xml.getElementsByTagName("recurso");
+        let html = "";
+        for (let r of recursos) {
+          const cat = r.getElementsByTagName("categoria")[0].textContent;
+          const titulo = r.getElementsByTagName("titulo")[0].textContent;
+          const desc = r.getElementsByTagName("descripcion")[0].textContent;
+          html += `
+            <div class="recurso">
+              <div class="categoria">${cat}</div>
+              <div class="titulo">${titulo}</div>
+              <div class="descripcion">${desc}</div>
+            </div>
+          `;
+        }
+        document.getElementById("contenedor").innerHTML = html;
+      });
+  </script>
+</body>
+</html>
+
