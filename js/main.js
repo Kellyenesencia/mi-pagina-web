@@ -40,6 +40,8 @@
 	  verticalOffset: 0
   });
 
+  
+
 
 	var fullHeight = function() {
 
@@ -317,6 +319,21 @@
 
     fixedContentPos: false
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  var navLinks = document.querySelectorAll('.navbar-nav a');
+  var navbarCollapse = document.querySelector('.navbar-collapse');
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 992) {
+        // Cierra el menú móvil
+        $(navbarCollapse).collapse('hide');
+      }
+    });
+  });
+});
+
 
 
 })(jQuery);
